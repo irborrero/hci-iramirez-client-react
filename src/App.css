@@ -36,3 +36,394 @@
     transform: rotate(360deg);
   }
 }
+
+
+.wbdv-label.wbdv-course-manager {
+  padding-top: 4px;
+  padding-left: 10px;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.btn.wbdv-button.wbdv-add-course {
+  padding-top: 5px;
+  color: brown;
+}
+
+.wbdv-field.wbdv-hamburger {
+  padding-top: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+  .owned-collapse {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .lastModified-collapse {
+    display: none;
+  }
+}
+
+.selected {
+  background-color: brown;
+  color: white;
+}
+
+.courseTitle {
+  padding-left: 5px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.white {
+  color: white;
+}
+
+.black {
+  color: black;
+}
+
+a:hover {
+  color: cornflowerblue;
+}
+
+#newinput {
+  border-radius: 5px;
+}
+
+
+.btn.wbdv-button {
+  float: right;
+}
+
+.wbdv-row.wbdv-button.wbdv-delete:hover {
+  color: black;
+}
+
+
+
+.grid.owned-label {
+  padding-right: 10px;
+}
+
+.container.grid {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.table {
+  margin: 0px
+}
+
+.row.card-row {
+  text-align: center;
+  margin: 20px;
+}
+
+.card {
+  width: 80%;
+  border-radius: 0px;
+  border: 10px solid white;
+  padding: 5px;
+  background-color: lightgrey;
+}
+
+.selected-grid {
+  color: #BD2519;
+}
+
+.card-img-top {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.card-body{
+  text-align: center;
+  padding-top: 3px;
+  padding-bottom: 0px;
+}
+
+row.course-title-row {
+}
+
+.course-title-grid {
+  margin-bottom: 0px;
+}
+
+
+
+
+
+
+.wbdv-bold {
+  font-weight: bolder;
+}
+.wbdv-module {
+  background-color: lightgray;
+}
+.wbdv-module.wbdv-selected {
+  background-color: #4F86ED;
+}
+
+.wbdv-course-editor.wbdv-close {
+  color: lightgrey;
+}
+
+.wbdv-course-title {
+  color: white;
+  font-weight: bold;
+  font-size: xx-large;
+  padding-top: 3px;
+}
+
+.wbdv-page-tab{
+}
+
+.wbdv-new-page-btn {
+  color: white;
+}
+
+.wbdv-module-list {
+}
+
+.list-group-item,
+.nav-link.tab,
+.nav-link.tab:hover {
+  border-radius: 5px;
+  color: white;
+}
+
+.nav-link.tab:hover {
+  background-color: #4F86ED;
+  border: 0px;
+  border-radius: 5px;
+}
+
+
+.nav.nav-tabs {
+  border: 0px;
+}
+
+.nav.nav-tabs,
+.list-group-item {
+  background-color: #BD2519;
+}
+
+.nav-link.tab {
+  margin: 5px;
+}
+
+.list-group-item:hover {
+  background-color: #4F86ED;
+}
+.list-group-item.active.wbdv-module-item {
+  background-color: #4F86ED;
+}
+
+.list-group {
+  margin-top: 20px;
+}
+.list-group-item {
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.wbdv-module-item {
+}
+
+.wbdv-module-item-title {
+}
+
+.wbdv-module-item-delete-btn {
+  color: white;
+  float: right;
+}
+
+.wbdv-module-item-delete-btn:hover {
+  color: darkblue;
+}
+
+.especial-row {
+  background-color:  #BD2519;
+  border: 10px solid#BD2519;
+  position: relative;
+  left: 0%;
+  right: 0%;
+}
+
+.custom-col {
+  background-color: #901c13;
+  min-height: 100vh;
+  height: 100%;
+
+}
+
+.btn.wbdv-module-item-add-btn {
+  float: right;
+  color: white;
+}
+
+.wbdv-module-item-add-btn:hover {
+  color: white;
+}
+
+.nav.nav-pills {
+  margin: 20px;
+}
+
+.nav-item.topic {
+  margin: 10px;
+  border: 5px solid #4F86ED;
+  border-radius: 5px;
+  background-color:#4F86ED;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-item.topic:hover {
+  color: white;
+  background-color: #007CFF ;
+}
+
+.btn.wbdv-new-tab-btn {
+  margin-top: 10px;
+  color: #007CFF;
+}
+
+.btn.wbdv-new-tab-btn:hover {
+  color: #007CFF;
+}
+
+.btn.toggle-btn{
+  float: right;
+}
+
+.btn.save-btn {
+  background-color: #29A645;
+  color: white;
+  border-radius: 5px;
+  float: right;
+}
+
+.btn.save-btn:hover {
+  background-color: darkgreen;
+}
+
+.preview-label{
+  font-size: larger;
+  float: right;
+  margin-left: 20px;
+}
+
+
+form{
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border: 2px solid darkgrey;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.form-group {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.heading-widget {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.preview-widget {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.heading {
+  margin-bottom: auto;
+  margin-top: 15px;
+}
+.heading-text {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.btn.arrow {
+  margin: 3px;
+  background-color: #FFC108;
+}
+
+.btn.delete {
+  background-color: #BD2519;
+  color: white;
+  margin: 3px;
+}
+
+.btn.add{
+  background-color: #BD2519;
+  color: white;
+  position: absolute;
+  right: 3%;
+  bottom: 3%;
+}
+
+.heading {
+  width: fit-content;
+}
+
+.btn.btn-secondary.btn-md.dropdown-toggle {
+  background-color: white;
+  color: black;
+}
+
+.container.card {
+  padding: 20px;
+  margin: 20px;
+}
+
+.card-div {
+  padding: 5px;
+}
+
+.row {
+  align-content: center;
+}
+
+.smaller {
+  width: 100px;
+}
+
+.white-module {
+  color: white
+}
+
+.white-module:hover {
+  color: #282c34;
+}
+
+#moduleTitle {
+  border-radius: 3px;
+  border-color: white;
+
+}
+
+.input {
+  width: 120px;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+
+.blue {
+  background-color: #4F86ED;
+}
+
+.topic.red {
+  background-color: #007CFF;
+}
