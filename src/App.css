@@ -445,3 +445,20 @@ form{
 .panel.heading {
   border: 1px solid lightgrey;
 }
+
+.container.drawer {
+  border: 2px solid lightgrey;
+}
+
+h5 {
+   margin-left: 20px;
+ }
+
+#hex {
+  border-radius: 3px;
+  margin: 10px;
+}
+
+canvas {
+  border: 10px solid black;
+}
