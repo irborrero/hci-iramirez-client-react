@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 const CourseRowUnselectedComponent  = ({index, course, selectRow}) =>
     <React.Fragment>
         <td onClick={() => selectRow(index)}>
-            <Link className="black"to={`/course/${course._id}`}>
+            <Link data-tip="Click to select row" className="black"to={`/course/${course._id}`}>
                 <i className="fas fa-file-alt wbdv-row wbdv-icon"></i>
                 <label className="courseTitle">{course.title}</label>
             </Link>

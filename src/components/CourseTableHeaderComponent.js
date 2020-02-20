@@ -2,6 +2,7 @@ import React from "react";
 import {BrowserRouter as Router, Link, Route} from "react-router-dom";
 
 const CourseTableHeaderComponent = ({toggle}) =>
+
     <React.Fragment>
         <Route path={["/", "/table"]}
                exact={true}
@@ -24,12 +25,14 @@ const CourseTableHeaderComponent = ({toggle}) =>
                        </div>
                        </th>
                        <th scope="col">
-                           <button className="btn wbdv-button wbdv-grid-layout" onClick={toggle} >
+                           <button className="btn wbdv-button wbdv-grid-layout"
+                                   onClick={toggle} >
                                <Link  className="black" to={`/grid`}>
                                    <i className="fas fa-grip-horizontal"></i>
                                </Link>
                            </button>
-                           <button className="btn wbdv-button wbdv-header wbdv-sort">
+                           <button className="btn wbdv-button wbdv-header wbdv-sort" data-toggle="tooltip"
+                                   title="Sort">
                                <i className="fas fa-sort-alpha-up"></i>
                            </button>
                            <button className="btn text wbdv-button wbdv-list-layout" >
