@@ -427,3 +427,21 @@ form{
 .topic.red {
   background-color: #007CFF;
 }
+
+.text {
+  border: 2px solid black;
+  border-radius: 3px;
+}
+
+.container.panel {
+  border: 2px solid black;
+  border-radius: 3px;
+  margin-top: 50px;
+  text-align: center;
+  padding: 20px;
+  width: fit-content;
+}
+
+.panel.heading {
+  border: 1px solid lightgrey;
+}

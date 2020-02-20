@@ -2,7 +2,7 @@ import React from "react";
 import {Route} from "react-router-dom";
 
 const CourseNavComponent = ({addCourse, updateForm}) =>
-    <Route path={["/", "/table", "/grid"]}
+    <Route path={["/", "/table", "/grid", "/grid/panel", "/table/panel"]}
            exact={true}
            render={() =>
                <React.Fragment>
@@ -28,9 +28,8 @@ const CourseNavComponent = ({addCourse, updateForm}) =>
                                id="wbdv-new-course"/>
                        </div>
                        <div className="col-2">
-                           <button onClick={addCourse} className="btn wbdv-button wbdv-add-course">
-                               <i className="fa fa-plus-circle fa-3x">
-                               </i>
+                           <button onClick={addCourse} className="btn text wbdv-button wbdv-add-course">
+                               Add Course
                            </button>
                        </div>
                    </nav>

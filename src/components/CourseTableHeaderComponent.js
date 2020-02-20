@@ -15,7 +15,14 @@ const CourseTableHeaderComponent = ({toggle}) =>
                        <th className="wbdv-header wbdv-owner owned-collapse" scope="col">
                            <label>Owned by</label>
                        </th>
-                       <th className="wbdv-header wbdv-last-modified lastModified-collapse" scope="col">Last Modified by me</th>
+                       <th className="wbdv-header wbdv-last-modified lastModified-collapse" scope="col">
+                       <div className="form-check">
+                           <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
+                               <label className="form-check-label" htmlFor="defaultCheck1">
+                                   Last Modified by Me
+                               </label>
+                       </div>
+                       </th>
                        <th scope="col">
                            <button className="btn wbdv-button wbdv-grid-layout" onClick={toggle} >
                                <Link  className="black" to={`/grid`}>
@@ -25,10 +32,15 @@ const CourseTableHeaderComponent = ({toggle}) =>
                            <button className="btn wbdv-button wbdv-header wbdv-sort">
                                <i className="fas fa-sort-alpha-up"></i>
                            </button>
-
+                           <button className="btn text wbdv-button wbdv-list-layout" >
+                               <Link className="black" to={`table/panel`}>
+                                   Panel
+                               </Link>
+                           </button>
                        </th>
                    </tr>
                }/>
+
         <Route path="/grid"
                exact={true}
                render={() =>
@@ -51,9 +63,12 @@ const CourseTableHeaderComponent = ({toggle}) =>
                                    <i className="fas fa-list"></i>
                                </Link>
                            </button>
-
+                           <button className="btn text wbdv-button wbdv-list-layout" >
+                               <Link className="black" to={`grid/panel`}>
+                                  Panel
+                               </Link>
+                           </button>
                        </th>
-
                    </tr>
                }/>
     </React.Fragment>

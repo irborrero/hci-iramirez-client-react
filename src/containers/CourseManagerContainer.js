@@ -5,6 +5,7 @@ import {findAllCourses, findCourseById, updateCourse, deleteCourse, createCourse
 import CourseNavComponent from "../components/CourseNavComponent";
 import CourseTableHeaderComponent from "../components/CourseTableHeaderComponent";
 import {BrowserRouter as Router, Link, Route} from "react-router-dom";
+import CoursePanelComponent from "../components/CoursePanelComponent";
 
 class CourseManagerContainer extends React.Component {
 
@@ -143,7 +144,7 @@ class CourseManagerContainer extends React.Component {
                                }/>
                     </table>
 
-                    <Route path="/grid"
+                <Route path="/grid"
                            exact={true}
                            render={() =>
                                <CourseGridComponent
@@ -155,6 +156,13 @@ class CourseManagerContainer extends React.Component {
                                    selected = {this.state.selectedRow}/>
                            }/>
 
+                <Route path={["/grid/panel", "/table/panel"]}
+                       exact={true}
+                       render={() =>
+                           <CoursePanelComponent
+                               courses={this.state.courses}
+                               />
+                       }/>
             </Router>
         )
     }

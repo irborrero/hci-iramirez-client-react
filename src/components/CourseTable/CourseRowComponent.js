@@ -3,6 +3,7 @@ import CourseRowUnselectedComponent from "./CourseRowUnselectedComponent";
 import CourseRowSelectedComponent from "./CourseRowSelectedComponent";
 
 
+
 const CourseRowComponent = ({course, index, deleteCourse, activeRow, editingRow, selectRow, editRow}) =>
 {
     return(
@@ -17,6 +18,7 @@ const CourseRowComponent = ({course, index, deleteCourse, activeRow, editingRow,
             }
             {
                 index === activeRow &&
+                // eslint-disable-next-line react/jsx-no-undef
                 <CourseRowSelectedComponent
                     index = {index}
                     course = {course}
