@@ -2,6 +2,7 @@ import React from "react";
 import "./LogIn.style.client.css";
 
 const LogInComponent = () =>
+
     <form>
         <div className="form-group row">
             <label htmlFor="username" className="col-sm-2 col-form-label">
