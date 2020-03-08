@@ -5,12 +5,13 @@ class HomePageContainer extends React.Component {
 
     render() {
         return(
-            <nav className="navbar navbar-light bg-faded float-right">
+            <div>
+                <nav className="navbar navbar-light bg-faded float-right">
                     <button className="btn btn-outline-success" type="button">Log In</button>
                     <button className="btn btn-outline-secondary" type="button">Sign Up
                     </button>
-            </nav>
-
+                </nav>
+            </div>
         )
     }
 
