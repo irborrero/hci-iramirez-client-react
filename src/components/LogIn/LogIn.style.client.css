@@ -48,3 +48,9 @@ a:hover {
 .wbdv-link.wbdv-register {
     margin-top: 20px;
 }
+
+.container-login {
+    margin: 100px;
+    border-radius: 5px;
+    padding: 50px;
+}

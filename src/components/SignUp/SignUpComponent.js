@@ -2,7 +2,7 @@ import React from "react";
 import "./SignUp.style.client.css"
 
 const SignUpComponent = () =>
-    <form>
+    <form className="container-signup-form">
         <div className="form-group row">
             <label htmlFor="nameFld" className="col-sm-2 col-form-label">
                 Name </label>
@@ -62,8 +62,7 @@ const SignUpComponent = () =>
             <label className="col-sm-2 col-form-label"></label>
             <div className="col-sm-10">
                 <button id="registerBtn"
-                        className="btn btn-primary btn-block wbdv-button wbdv-register"
-                        formAction="">Create Account
+                        className="btn btn-primary btn-block wbdv-button wbdv-register">Create Account
                 </button>
             </div>
         </div>
