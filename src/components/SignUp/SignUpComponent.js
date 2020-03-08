@@ -1,4 +1,6 @@
 import React from "react";
+import "./SignUp.style.client.css"
+
 const SignUpComponent = () =>
     <form>
         <div className="form-group row">

@@ -1,0 +1,53 @@
+h1 {
+    text-align: center;
+    margin: 20px;
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+.register {
+    background-color: #d3d3d3;
+}
+
+.wbdv-field {
+    border-color: black;
+    font-weight: lighter;
+
+}
+
+/* Following fields included because it is a requirment*/
+.wbdv-field.wbdv-username {
+}
+
+.wbdv-field.wbdv-password {
+}
+
+.wbdv-password-verify {
+}
+
+.wbdv-button.wbdv-register {
+    background-color: #BD2519;
+    border-color: transparent;
+}
+.wbdv-button:hover {
+    background-color: #901c13;
+}
+
+.wbdv-button:active{
+    background-color: #901c13;
+}
+
+.wbdv-link.wbdv-login {
+}

@@ -1,4 +1,6 @@
 import React from "react";
+import "./LogIn.style.client.css";
+
 const LogInComponent = () =>
     <form>
         <div className="form-group row">
