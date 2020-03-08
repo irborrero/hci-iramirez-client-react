@@ -1,5 +1,6 @@
 import React from "react";
 import "./SignUp.style.client.css"
+import {Link} from "react-router-dom";
 
 const SignUpComponent = () =>
     <form className="container-signup-form">
@@ -61,9 +62,11 @@ const SignUpComponent = () =>
         <div className="form-group row">
             <label className="col-sm-2 col-form-label"></label>
             <div className="col-sm-10">
+                <Link to="/course-manager">
                 <button id="registerBtn"
                         className="btn btn-primary btn-block wbdv-button wbdv-register">Create Account
                 </button>
+                </Link>
             </div>
         </div>
     </form>

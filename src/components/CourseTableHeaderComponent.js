@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Link, Route} from "react-router-dom";
 const CourseTableHeaderComponent = ({toggle}) =>
 
     <React.Fragment>
-        <Route path={["/", "/table"]}
+        <Route path={["/course-manager", "/course-manager/table"]}
                exact={true}
                render={() =>
                    <tr className = "table">
@@ -27,7 +27,7 @@ const CourseTableHeaderComponent = ({toggle}) =>
                        <th scope="col">
                            <button className="btn wbdv-button wbdv-grid-layout"
                                    onClick={toggle} >
-                               <Link  className="black" to={`/grid`}>
+                               <Link  className="black" to={`/course-manager/grid`}>
                                    <i className="fas fa-grip-horizontal"></i>
                                </Link>
                            </button>
@@ -36,7 +36,7 @@ const CourseTableHeaderComponent = ({toggle}) =>
                                <i className="fas fa-sort-alpha-up"></i>
                            </button>
                            <button className="btn text wbdv-button wbdv-list-layout" >
-                               <Link className="black" to={`table/panel`}>
+                               <Link className="black" to={`/course-manager/table/panel`}>
                                    Panel
                                </Link>
                            </button>
@@ -44,7 +44,7 @@ const CourseTableHeaderComponent = ({toggle}) =>
                    </tr>
                }/>
 
-        <Route path="/grid"
+        <Route path="/course-manager/grid"
                exact={true}
                render={() =>
                    <tr className = "grid">
@@ -62,12 +62,12 @@ const CourseTableHeaderComponent = ({toggle}) =>
                                <i className="fas fa-sort-alpha-up"></i>
                            </button>
                            <button className="btn wbdv-button wbdv-list-layout" onClick={toggle} >
-                               <Link className="black" to={`/table`}>
+                               <Link className="black" to={`/course-manager/table`}>
                                    <i className="fas fa-list"></i>
                                </Link>
                            </button>
                            <button className="btn text wbdv-button wbdv-list-layout" >
-                               <Link className="black" to={`grid/panel`}>
+                               <Link className="black" to={`/course-manager/grid/panel`}>
                                   Panel
                                </Link>
                            </button>

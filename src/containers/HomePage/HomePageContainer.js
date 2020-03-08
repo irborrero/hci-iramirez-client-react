@@ -6,6 +6,7 @@ import LogInComponent from "../../components/LogIn/LogInComponent";
 import SignUpComponent from "../../components/SignUp/SignUpComponent";
 import StudentOrProfessorComponent from "../../components/SignUp/StuendtOrProfessorComponent";
 import SignUpProfessorComponent from "../../components/SignUp/SignUpProfessorComponent";
+import CourseManagerContainer from "../CourseManagerContainer";
 
 class HomePageContainer extends React.Component {
 
@@ -70,6 +71,16 @@ class HomePageContainer extends React.Component {
                        exact={true}
                        render={() =>
                            <SignUpComponent/>
+                       }/>
+
+                <Route path={["/course-manager",
+                    "/course-manager/table",
+                    "/course-manager/grid",
+                    "/course-manager/table/panel",
+                    "/course-manager/grid/panel"]}
+                       exact={true}
+                       render={() =>
+                           <CourseManagerContainer/>
                        }/>
 
 
