@@ -1,9 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+
 import CourseManagerContainer from "./containers/CourseManagerContainer.js";
+import HomePageContainer from "./containers/HomePage/HomePageContainer.js";
 
 const App = () =>
-    <CourseManagerContainer/>
+    <HomePageContainer/>
 
 export default App;
