@@ -11,16 +11,6 @@ class HomePageContainer extends React.Component {
 
     render() {
         return(
-<<<<<<< HEAD
-
-            <div>
-                <nav className="navbar navbar-light bg-faded float-right">
-                    <button className="btn btn-outline-success" type="button">Log In</button>
-                    <button className="btn btn-outline-secondary" type="button">Sign Up
-                    </button>
-                </nav>
-            </div>
-=======
             <Router>
                 <Route path="/"
                        exact={true}
@@ -62,7 +52,6 @@ class HomePageContainer extends React.Component {
 
 
             </Router>
->>>>>>> 47f18722ca4be0e29741631dbd8ef39283c81681
         )
     }
 
