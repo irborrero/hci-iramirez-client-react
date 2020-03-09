@@ -4,9 +4,9 @@ import {Link} from "react-router-dom";
 
 const StudentOrProfessorComponent = () =>
         <React.Fragment>
-            <h1>Sign Up</h1>
+            <div className="signup-page">
             <div className="container-signup">
-                <h2>I am a</h2>
+                <h2>I am a...</h2>
                 <div>
                     <div>
                         <Link to="/signup/professor">
@@ -23,6 +23,7 @@ const StudentOrProfessorComponent = () =>
                         </Link>
                     </div>
                 </div>
+            </div>
             </div>
         </React.Fragment>
 
