@@ -1,6 +1,6 @@
 import React from "react";
 import "./LogIn.style.client.css";
-import {Route} from "react-router-dom";
+import {Link, Route} from "react-router-dom";
 
 const LogInComponent = () =>
 
@@ -26,7 +26,9 @@ const LogInComponent = () =>
         <div className="form-group row">
             <label className="col-sm-2 col-form-label"></label>
             <div className="col-sm-10">
-                <button className="btn btn-primary btn-block wbdv-button wbdv-login">Log in</button>
+                <Link to="/course-manager">
+                    <button className="btn btn-primary btn-block wbdv-button wbdv-login">Log in</button>
+                </Link>
                 <div className="row">
                     <div className="col-4 wbdv-link wbdv-forgot-password">
                         <a href="#">Forgot Password?</a>

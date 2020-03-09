@@ -119,51 +119,51 @@ class CourseManagerContainer extends React.Component {
 
     render() {
         return(
-            <Router>
-                    <CourseNavComponent
-                        addCourse = {this.addCourse}
-                        updateForm = {this.updateForm}/>
+            <React.Fragment>
+                <CourseNavComponent
+                    addCourse = {this.addCourse}
+                    updateForm = {this.updateForm}/>
 
-                    <table className="table table-hover">
-                        <thead>
-                        <CourseTableHeaderComponent
-                            toggle = {this.toggle}
-                        />
-                        </thead>
+                <table className="table table-hover">
+                    <thead>
+                    <CourseTableHeaderComponent
+                        toggle = {this.toggle}
+                    />
+                    </thead>
 
-                        <Route path={["/", "/table"]}
-                               exact={true}
-                               render={() =>
-                                   <CourseTableComponent
-                                       courses={this.state.courses}
-                                       deleteCourse={this.deleteCourse}
-                                       activeRow={this.state.selectedRow}
-                                       editingRow={this.state.editingRow}
-                                       selectRow={this.selectRow}
-                                       editRow={this.editRow}/>
-                               }/>
-                    </table>
-
-                <Route path="/grid"
+                    <Route path={["/course-manager", "/course-manager/table"]}
                            exact={true}
                            render={() =>
-                               <CourseGridComponent
+                               <CourseTableComponent
                                    courses={this.state.courses}
                                    deleteCourse={this.deleteCourse}
-                                   select ={this.selectRow}
-                                   edit={this.editRow}
-                                   editing={this.state.editingRow}
-                                   selected = {this.state.selectedRow}/>
+                                   activeRow={this.state.selectedRow}
+                                   editingRow={this.state.editingRow}
+                                   selectRow={this.selectRow}
+                                   editRow={this.editRow}/>
                            }/>
+                </table>
 
-                <Route path={["/grid/panel", "/table/panel"]}
+                <Route path="/course-manager/grid"
+                       exact={true}
+                       render={() =>
+                           <CourseGridComponent
+                               courses={this.state.courses}
+                               deleteCourse={this.deleteCourse}
+                               select ={this.selectRow}
+                               edit={this.editRow}
+                               editing={this.state.editingRow}
+                               selected = {this.state.selectedRow}/>
+                       }/>
+
+                <Route path={["/course-manager/grid/panel", "/course-manager/table/panel"]}
                        exact={true}
                        render={() =>
                            <CoursePanelComponent
                                courses={this.state.courses}
-                               />
+                           />
                        }/>
-            </Router>
+            </React.Fragment>
         )
     }
 }

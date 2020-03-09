@@ -2,9 +2,7 @@ import React from "react";
 import {Route} from "react-router-dom";
 
 const CourseNavComponent = ({addCourse, updateForm}) =>
-    <Route path={["/", "/table", "/grid", "/grid/panel", "/table/panel"]}
-           exact={true}
-           render={() =>
+
                <React.Fragment>
                    <nav className="navbar navbar-expand-lg">
                        <div className="col-3">
@@ -34,6 +32,6 @@ const CourseNavComponent = ({addCourse, updateForm}) =>
                        </div>
                    </nav>
                </React.Fragment>
-           }/>
+
 
 export default CourseNavComponent
