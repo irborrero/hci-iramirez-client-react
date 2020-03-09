@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import "./CourseTable.style.client.css"
 
 class CourseRowSelectedComponent extends React.Component {
 

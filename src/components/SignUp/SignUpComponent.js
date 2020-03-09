@@ -4,7 +4,8 @@ import {Link} from "react-router-dom";
 
 const SignUpComponent = () =>
     <React.Fragment>
-        <h1>Sign Up</h1>
+        <div className="signup-page">
+        <h1 className="white">Sign Up</h1>
         <form className="container-login2">
             <div className="form-group row">
                 <label htmlFor="nameFld" className="col-sm-2 col-form-label">
@@ -23,16 +24,6 @@ const SignUpComponent = () =>
                            id="lastNameFld"
                            placeholder="Introduce your last name"/>
                 </div>
-            </div>
-
-            <div className="form-group row">
-                <label htmlFor="College" className="col-sm-2 col-form-label">
-                    College </label>
-                    <select className="col-sm-10 wbdv-field form-control">
-                    <option value="CS">Khoury College of Computer Science</option>
-                    <option value="IS">Information Systems</option>
-                    </select>
-
             </div>
             <div className="form-group row">
                 <label htmlFor="emailFld" className="col-sm-2 col-form-label">
@@ -62,13 +53,20 @@ const SignUpComponent = () =>
                            placeholder="Introduce password again"/>
                 </div>
             </div>
+            <div className="form-group row">
+                <label className="col-sm-2 col-form-label"> </label>
+                <div className="col-sm-10">
+                    <Link to="/course-manager">
+                        <button id="registerBtn"
+                                className="btn btn-outline-danger btn-block">Create Account
+                        </button>
+                    </Link>
+                </div>
+            </div>
         </form>
 
-        <Link to="/course-manager">
-            <button id="registerBtn"
-                    className="btn btn-outline-danger wbdv-register login2">Create Account
-            </button>
-        </Link>
+
+        </div>
     </React.Fragment>
 
 

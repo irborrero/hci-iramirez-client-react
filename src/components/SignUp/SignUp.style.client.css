@@ -1,20 +1,50 @@
+.signup-page{
+    background-color: firebrick;
+    position: absolute;
+    width: 100%;
+    height: 100%
+}
+
+.container-signup {
+    padding: 30px;
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 500px;
+}
+
+.container-signup-form {
+    margin: 50px;
+    padding: 20px;
+}
+
+.container-login2 {
+    padding: 30px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 800px;
+}
+
+.white {
+    color: white;
+}
 h1 {
     text-align: center;
     margin: 20px;
-}
-
-a:link {
-    color: black;
-    text-decoration: none;
-}
-
-a:visited {
-    color: black;
-    text-decoration: none;
-}
-
-a:hover {
-    font-weight: bold;
 }
 
 .register {
@@ -27,36 +57,6 @@ a:hover {
 
 }
 
-/* Following fields included because it is a requirment*/
-.wbdv-field.wbdv-username {
-}
-
-.wbdv-field.wbdv-password {
-}
-
-.wbdv-password-verify {
-}
-
-.wbdv-button.wbdv-register {
-    background-color: #BD2519;
-    border-color: transparent;
-}
-.wbdv-button:hover {
-    background-color: #901c13;
-}
-
-.wbdv-button:active{
-    background-color: #901c13;
-}
-
-.wbdv-link.wbdv-login {
-}
-
-.container-signup {
-    margin: 30px;
-    padding: 30px;
-    text-align: center;
-}
 
 .btn-signup {
     margin-top: 10px;
@@ -64,16 +64,3 @@ a:hover {
 }
 
 
-.container-signup-form {
-    margin: 50px;
-    padding: 20px;
-}
-
-.container-login2 {
-    border: 2px solid darkgrey;
-    background-color: lightgrey;
-    margin-left: 300px;
-    margin-right: 300px;
-    border-radius: 5px;
-    padding: 50px;
-}
