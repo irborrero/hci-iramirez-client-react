@@ -6,6 +6,7 @@ import CourseNavComponent from "../components/CourseNavComponent";
 import CourseTableHeaderComponent from "../components/CourseTableHeaderComponent";
 import {BrowserRouter as Router, Link, Route} from "react-router-dom";
 import CoursePanelComponent from "../components/CoursePanelComponent";
+import CoursePageComponent from "../components/CoursePage/CoursePageComponent";
 
 class CourseManagerContainer extends React.Component {
 
@@ -155,6 +156,7 @@ class CourseManagerContainer extends React.Component {
                                editing={this.state.editingRow}
                                selected = {this.state.selectedRow}/>
                        }/>
+
 
                 <Route path={["/course-manager/grid/panel", "/course-manager/table/panel"]}
                        exact={true}

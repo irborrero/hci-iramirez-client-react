@@ -8,6 +8,7 @@ import StudentOrProfessorComponent from "../../components/SignUp/StuendtOrProfes
 import SignUpProfessorComponent from "../../components/SignUp/SignUpProfessorComponent";
 import CourseManagerContainer from "../CourseManagerContainer";
 import ConfirmEmailComponent from "../../components/SignUp/ConfirmEmailComponent";
+import CoursePageComponent from "../../components/CoursePage/CoursePageComponent";
 
 class HomePageContainer extends React.Component {
 
@@ -88,6 +89,11 @@ class HomePageContainer extends React.Component {
                        exact={true}
                        render={() =>
                            <CourseManagerContainer/>
+                       }/>
+                <Route path="/course/:courseId"
+                       exact={true}
+                       render={() =>
+                           <CoursePageComponent/>
                        }/>
 
 
