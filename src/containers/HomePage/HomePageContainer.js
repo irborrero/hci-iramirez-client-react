@@ -7,6 +7,7 @@ import SignUpComponent from "../../components/SignUp/SignUpComponent";
 import StudentOrProfessorComponent from "../../components/SignUp/StuendtOrProfessorComponent";
 import SignUpProfessorComponent from "../../components/SignUp/SignUpProfessorComponent";
 import CourseManagerContainer from "../CourseManagerContainer";
+import ConfirmEmailComponent from "../../components/SignUp/ConfirmEmailComponent";
 
 class HomePageContainer extends React.Component {
 
@@ -71,6 +72,12 @@ class HomePageContainer extends React.Component {
                        exact={true}
                        render={() =>
                            <SignUpComponent/>
+                       }/>
+
+                <Route path="/signup/confirmemail"
+                       exact={true}
+                       render={() =>
+                           <ConfirmEmailComponent/>
                        }/>
 
                 <Route path={["/course-manager",

@@ -1,5 +1,6 @@
 import React from "react";
 import "./SignUp.style.client.css"
+import {Link} from "react-router-dom";
 
 const SignUpProfessorComponent = () =>
         <React.Fragment>
@@ -21,7 +22,9 @@ const SignUpProfessorComponent = () =>
                         <label htmlFor="emailFld" className="col-sm-4 col-form-label"></label>
                     </div>
                 </form>
-                <button className="btn btn-signup">Confirm</button>
+                <Link to="/signup/confirmemail">
+                    <button className="btn btn-signup">Confirm</button>
+                </Link>
             </div>
         </React.Fragment>
 
