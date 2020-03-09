@@ -38,21 +38,8 @@
 }
 
 
-.wbdv-label.wbdv-course-manager {
-  padding-top: 4px;
-  padding-left: 10px;
-  font-weight: bolder;
-  font-size: 25px;
-}
 
-.btn.wbdv-button.wbdv-add-course {
-  padding-top: 5px;
-  color: brown;
-}
 
-.wbdv-field.wbdv-hamburger {
-  padding-top: 8px;
-}
 
 @media only screen and (max-width: 768px) {
   .owned-collapse {
@@ -96,9 +83,6 @@ a:hover {
 }
 
 
-.btn.wbdv-button {
-  float: right;
-}
 
 .wbdv-row.wbdv-button.wbdv-delete:hover {
   color: black;
@@ -202,7 +186,14 @@ row.course-title-row {
   border: 0px;
   border-radius: 5px;
 }
-
+.container-login {
+  border: 2px solid darkgrey;
+  background-color: lightgrey;
+  margin-left: 400px;
+  margin-right: 400px;
+  border-radius: 5px;
+  padding: 50px;
+}
 
 .nav.nav-tabs {
   border: 0px;
@@ -267,9 +258,7 @@ row.course-title-row {
   color: white;
 }
 
-.wbdv-module-item-add-btn:hover {
-  color: white;
-}
+
 
 .nav.nav-pills {
   margin: 20px;
@@ -428,10 +417,7 @@ form{
   background-color: #007CFF;
 }
 
-.text {
-  border: 2px solid black;
-  border-radius: 3px;
-}
+
 
 .container.panel {
   border: 2px solid black;

@@ -59,27 +59,21 @@ a:hover {
 }
 
 .btn-signup {
-    background-color: #BD2519;
-    color: white;
     margin-top: 10px;
     width: 200px;
 }
 
-.btn-signup:hover {
-    color: white;
-    font-weight: bolder;
-    background-color: #901c13;
-}
-
-.container-signup-professor {
-    border: 2px solid lightgrey;
-    border-radius: 3px;
-    padding: 20px;
-    margin: 50px;
-    text-align: center;
-}
 
 .container-signup-form {
     margin: 50px;
     padding: 20px;
+}
+
+.container-login2 {
+    border: 2px solid darkgrey;
+    background-color: lightgrey;
+    margin-left: 300px;
+    margin-right: 300px;
+    border-radius: 5px;
+    padding: 50px;
 }

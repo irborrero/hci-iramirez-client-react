@@ -1,5 +1,6 @@
 import React from "react";
-import {Route} from "react-router-dom";
+import "./CourseNav.style.client.css"
+
 
 const CourseNavComponent = ({addCourse, updateForm}) =>
 
@@ -8,7 +9,7 @@ const CourseNavComponent = ({addCourse, updateForm}) =>
                        <div className="col-3">
                            <div className="row">
                                <div className="col-2">
-                                   <i className="fa fa-bars wbdv-field wbdv-hamburger fa-2x"></i>
+                                   <i className="fa fa-bars wbdv-hamburger fa-2x"></i>
                                </div>
                                <div className="collapse navbar-collapse col-10">
                                    <label className="wbdv-label wbdv-course-manager">

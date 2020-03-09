@@ -6,7 +6,7 @@ import LogInComponent from "../../components/LogIn/LogInComponent";
 import SignUpComponent from "../../components/SignUp/SignUpComponent";
 import StudentOrProfessorComponent from "../../components/SignUp/StuendtOrProfessorComponent";
 import SignUpProfessorComponent from "../../components/SignUp/SignUpProfessorComponent";
-import CourseManagerContainer from "../CourseManagerContainer";
+import CourseManagerContainer from "../CourseManager/CourseManagerContainer";
 import ConfirmEmailComponent from "../../components/SignUp/ConfirmEmailComponent";
 import CoursePageComponent from "../../components/CoursePage/CoursePageComponent";
 

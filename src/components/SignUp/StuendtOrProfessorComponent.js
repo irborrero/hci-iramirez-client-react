@@ -10,14 +10,14 @@ const StudentOrProfessorComponent = () =>
                 <div>
                     <div>
                         <Link to="/signup/professor">
-                            <button className="btn btn-block btn-signup">
+                            <button className="btn btn-block btn-outline-danger btn-signup">
                                 Professor
                             </button>
                         </Link>
                     </div>
                     <div>
                         <Link to="/signup/form">
-                            <button className="btn btn-block btn-signup">
+                            <button className="btn btn-block btn-outline-danger btn-signup">
                                 Student
                             </button>
                         </Link>

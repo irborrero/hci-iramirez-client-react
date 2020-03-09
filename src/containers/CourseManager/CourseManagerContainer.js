@@ -1,12 +1,12 @@
 import React from "react";
-import CourseTableComponent from "../components/CourseTable/CourseTableComponent";
-import CourseGridComponent from "../components/CourseGrid/CourseGridComponent";
-import {findAllCourses, findCourseById, updateCourse, deleteCourse, createCourse} from "../services/CourseService";
-import CourseNavComponent from "../components/CourseNavComponent";
-import CourseTableHeaderComponent from "../components/CourseTableHeaderComponent";
+import CourseTableComponent from "../../components/CourseTable/CourseTableComponent";
+import CourseGridComponent from "../../components/CourseGrid/CourseGridComponent";
+import {findAllCourses, findCourseById, updateCourse, deleteCourse, createCourse} from "../../services/CourseService";
+import CourseNavComponent from "../../components/Navbar/CourseNavComponent";
+import CourseTableHeaderComponent from "../../components/TableHeader/CourseTableHeaderComponent";
 import {BrowserRouter as Router, Link, Route} from "react-router-dom";
-import CoursePanelComponent from "../components/CoursePanelComponent";
-import CoursePageComponent from "../components/CoursePage/CoursePageComponent";
+import CoursePanelComponent from "../../components/CoursePanelComponent";
+import CoursePageComponent from "../../components/CoursePage/CoursePageComponent";
 
 class CourseManagerContainer extends React.Component {
 

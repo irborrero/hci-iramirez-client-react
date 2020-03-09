@@ -32,15 +32,6 @@ a:hover {
 .wbdv-field.wbdv-password {
 }
 
-.wbdv-button.wbdv-login {
-    background-color: #BD2519;
-    border-color: transparent;
-}
-
-.wbdv-button:hover {
-    background-color: #901c13;
-}
-
 .wbdv-link.wbdv-forgot-password {
     margin-top: 20px;
 }
@@ -49,8 +40,17 @@ a:hover {
     margin-top: 20px;
 }
 
+.login2 {
+    width: 200px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 43%;
+}
 .container-login {
-    margin: 100px;
+    border: 2px solid darkgrey;
+    background-color: lightgrey;
+    margin-left: 400px;
+    margin-right: 400px;
     border-radius: 5px;
     padding: 50px;
 }

@@ -1,0 +1,31 @@
+
+.wbdv-label.wbdv-course-manager {
+    padding-top: 4px;
+    padding-left: 10px;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+
+.wbdv-hamburger {
+    margin-top: 8px;
+}
+
+.text {
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+.btn.wbdv-button.wbdv-add-course {
+    padding-top: 5px;
+    color: brown;
+}
+
+.btn.wbdv-button {
+    float: right;
+}
+
+.wbdv-button.wbdv-add-course:hover {
+    color: white;
+}
+

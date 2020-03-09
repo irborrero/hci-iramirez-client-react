@@ -35,11 +35,6 @@ const CourseTableHeaderComponent = ({toggle}) =>
                                    title="Sort">
                                <i className="fas fa-sort-alpha-up"></i>
                            </button>
-                           <button className="btn text wbdv-button wbdv-list-layout" >
-                               <Link className="black" to={`/course-manager/table/panel`}>
-                                   Panel
-                               </Link>
-                           </button>
                        </th>
                    </tr>
                }/>
@@ -64,11 +59,6 @@ const CourseTableHeaderComponent = ({toggle}) =>
                            <button className="btn wbdv-button wbdv-list-layout" onClick={toggle} >
                                <Link className="black" to={`/course-manager/table`}>
                                    <i className="fas fa-list"></i>
-                               </Link>
-                           </button>
-                           <button className="btn text wbdv-button wbdv-list-layout" >
-                               <Link className="black" to={`/course-manager/grid/panel`}>
-                                  Panel
                                </Link>
                            </button>
                        </th>
