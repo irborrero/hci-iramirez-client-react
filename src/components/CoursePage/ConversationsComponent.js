@@ -5,6 +5,10 @@ import {Link} from "react-router-dom";
 
 class ConversationsComponent extends React.Component{
 
+    state = {
+        newComment: ""
+    }
+
     render() {
         return(
             <div className="col-9">
@@ -13,8 +17,7 @@ class ConversationsComponent extends React.Component{
                         <h4 className="d-inline">DISCUSSIONS FOR TOPIC</h4>
                         <button type="button" className="btn btn-primary float-right"
                                 onClick={() => {this.props.addingComment(this.props.topicId)
-                                }}
-                        >Add Comment</button>
+                                }}>Add Comment</button>
                     </text>
                 </div>
 
@@ -30,7 +33,8 @@ class ConversationsComponent extends React.Component{
                             </div>
                             <div className="form-group">
                                 <label >Comment Body</label>
-                                <textarea className="form-control" placeholder="Write your new comment here"/>
+                                <textarea className="form-control"
+                                          placeholder="Write your new comment here"/>
                             </div>
                         </form>
                         <button type="button" className="btn btn-success">Save</button>
@@ -55,8 +59,6 @@ class ConversationsComponent extends React.Component{
                     }
 
                 </div>
-
-
             </div>
 
         )

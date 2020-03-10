@@ -6,7 +6,7 @@ const topics = [
 
 ]
 
-const widgetReducer = (
+const topicReducer = (
     state = {topics: topics}, action) => {
     switch (action.type) {
         case "UPDATE_WIDGET":
@@ -37,4 +37,4 @@ const widgetReducer = (
     }
 }
 
-export default widgetReducer
+export default topicReducer
