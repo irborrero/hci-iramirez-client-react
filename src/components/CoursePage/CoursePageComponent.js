@@ -5,14 +5,16 @@ import TopicsComponent from "./TopicsComponent";
 
 import topicsReducer from "../../reducers/topicReducer";
 import discussionReducer from "../../reducers/discussionReducer";
+import instructorReducer from "../../reducers/instructorReducer";
 
-import {Link} from "react-router-dom";
 import {combineReducers, createStore} from "redux";
 import {Provider} from "react-redux";
 
+
 const rootReducer = combineReducers({
     topics: topicsReducer,
-    discussions: discussionReducer
+    discussions: discussionReducer,
+    instructor: instructorReducer
 })
 
 const store = createStore(rootReducer);
