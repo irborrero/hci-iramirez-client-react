@@ -85,8 +85,6 @@ class ConversationsComponent extends React.Component{
                     }
 
                 </div>
-
-
             </div>
 
         )

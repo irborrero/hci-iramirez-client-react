@@ -1,6 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import "./CoursePage.style.client.css"
+import icon from "./default-icon.jpg"
 
 class InstructorComponent extends React.Component{
 
@@ -10,30 +11,31 @@ class InstructorComponent extends React.Component{
 
     render() {
         return(
-            <div className="container-fluid border text-left">
-                <div className="row">
-                    <h1>INSTRUCTOR COMPONENT</h1>
+            <div className="container-fluid instructor text-left">
+                <div className="row space-left">
+                    <h1 className="white">IS4300: Human Computer Interaction</h1>
                 </div>
-                <div className="row">
+                <div className="row space-bottom space-left">
                     <div className="col-3 ">
-                        <h3>Instructor Picture</h3>
+                        <h3 className="white">Instructor Picture</h3>
+                        <img src={icon}/>
                     </div>
                     <div className="col-9">
                         <div className="row">
-                            <div className="col-10">
-                                <h3>Brief description</h3>
+                            <div className="col-3">
+                                <h3 className="white">Brief description</h3>
                             </div>
                             <div className="col-2">
                                 {
                                     this.props.editingBriefDescription === false &&
-                                    <button className="btn hidden wbdv-row wbdv-button wbdv-edit"
+                                    <button className="btn hidden wbdv-row wbdv-button wbdv-edit white"
                                         onClick={this.props.editBriefDescription}>
                                         <i className="fas fa-pencil-alt wbdv-row wbdv-button wbdv-edit"></i>
                                     </button>
                                 }
                                 {
                                     this.props.editingBriefDescription &&
-                                    <button className="btn wbdv-row wbdv-button wbdv-save"
+                                    <button className="btn wbdv-row wbdv-button wbdv-save white"
                                         onClick={()=> this.props.saveBriefDescription(this.state.briefDescription)}>
                                         <i className="fas fa-check wbdv-button wbdv-save"></i>
                                     </button>
@@ -43,7 +45,7 @@ class InstructorComponent extends React.Component{
                         </div>
                         {
                             this.props.editingBriefDescription===false &&
-                            <span>{this.props.briefDescription}</span>
+                            <span className="white">{this.props.briefDescription}</span>
                         }
                         {
                             this.props.editingBriefDescription &&

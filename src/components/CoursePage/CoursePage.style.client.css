@@ -1,3 +1,16 @@
-textarea {
-    margin-bottom: 20px;
+.container-fluid.instructor {
+    background-color: brown;
+}
+
+.space-bottom {
+    padding-bottom: 30px;
+
+}
+
+.space-left {
+    margin-left: 30px;
+}
+
+.white {
+    color: white;
 }
