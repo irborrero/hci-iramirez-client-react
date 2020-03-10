@@ -5,6 +5,14 @@ import {Link} from "react-router-dom";
 
 class ConversationsComponent extends React.Component{
 
+    state = {
+        id: "",
+        title: "",
+        topic:"",
+        body:"",
+        user:"Anonymus"
+    }
+
     render() {
         return(
             <div className="col-9">
@@ -12,7 +20,11 @@ class ConversationsComponent extends React.Component{
                     <text className="list-group-item border-0">
                         <h4 className="d-inline">DISCUSSIONS FOR TOPIC</h4>
                         <button type="button" className="btn btn-primary float-right"
-                                onClick={() => {this.props.addingComment(this.props.topicId)
+                                onClick={() => {
+                                    this.setState(prevState => ({
+                                        topic: this.props.topicId
+                                    }))
+                                    this.props.addingComment(this.props.topicId)
                                 }}
                         >Add Comment</button>
                     </text>
@@ -26,15 +38,34 @@ class ConversationsComponent extends React.Component{
                             <div className="form-group">
                                 <label htmlFor="exampleFormControlInput1">Comment Title</label>
                                 <input type="email" className="form-control"
-                                       placeholder="Write your new comment here"/>
+                                       placeholder="Write your new comment here"
+                                       onChange={(e) => {
+                                           const newText = String(e.target.value);
+                                           this.setState(prevState => ({
+                                               title: newText
+                                           }))
+                                       }
+                                       }/>
                             </div>
                             <div className="form-group">
                                 <label >Comment Body</label>
-                                <textarea className="form-control" placeholder="Write your new comment here"/>
+                                <textarea className="form-control" placeholder="Write your new comment here"
+                                          onChange={(e) => {
+                                              const newText = String(e.target.value);
+                                              this.setState(prevState => ({
+                                                  body: newText
+                                              }))
+                                          }
+                                          }/>
                             </div>
                         </form>
-                        <button type="button" className="btn btn-success">Save</button>
-                        <button type="button" className="btn btn-danger">Cancel</button>
+                        <button type="button" className="btn btn-success"
+                                onClick={() => {
+                                    this.props.saveComment(this.state)
+                                }}>
+                            Save</button>
+                        <button type="button" className="btn btn-danger"
+                                onClick={this.props.cancelComment}>Cancel</button>
                     </a>
                     }
                     {
@@ -46,8 +77,7 @@ class ConversationsComponent extends React.Component{
                                     <h5 className="mb-1"> {discussion.title}</h5>
                                     <small>Today</small>
                                 </div>
-                                <p className="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam
-                                    eget risus varius blandit.</p>
+                                <p className="mb-1">{discussion.body}</p>
                                 <small>By {discussion.user}</small>
                             </a>
                         )
@@ -81,6 +111,17 @@ const dispatchToPropertyMapper = (dispatch) => {
         addingComment: (topicId) => {
             dispatch({
                 type: 'ADDING_COMMENT',
+            })
+        },
+        saveComment: (discussion) => {
+            dispatch({
+                type: 'SAVE_COMMENT',
+                discussion: discussion
+            })
+        },
+        cancelComment: () => {
+            dispatch({
+                type: 'CANCEL_COMMENT'
             })
         }
 

@@ -1,12 +1,18 @@
 const discussions = {
     adding: -1,
     discussions: [
-    {id: "123", title: "I had a great experience!!", topic:"1", user:"Ann"},
-    {id: "124", title: "Great class but a lot of work...", topic:"1", user:"Ben"},
-    {id: "125", title: "Very useful!!", topic:"3", user:"Jerry"},
-    {id: "126", title: "Could have been better organized", topic:"3", user:"Leslie"},
-    {id: "127", title: "Very strict grading!", topic:"0", user:"Andy"},
-    {id: "128", title: "Very good instructor", topic:"2", user:"April"}]
+    {id: "123", title: "I had a great experience!!",
+        body:"Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.", topic:"1", user:"Ann"},
+    {id: "124", title: "Great class but a lot of work...",
+        body:"Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.", topic:"1", user:"Ben"},
+    {id: "125", title: "Very useful!!",
+        body:"Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.", topic:"3", user:"Jerry"},
+    {id: "126", title: "Could have been better organized" ,
+        body:"Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.",topic:"3", user:"Leslie"},
+    {id: "127", title: "Very strict grading!",
+        body:"Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.", topic:"0", user:"Andy"},
+    {id: "128", title: "Very good instructor",
+        body:"Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.", topic:"2", user:"April"}]
 };
 
 const discussionReducer = (
@@ -36,6 +42,21 @@ const discussionReducer = (
                 ...state,
                 adding: 0
             }
+        case "CANCEL_COMMENT":
+            return {
+                ...state,
+                adding: -1
+            }
+        case "SAVE_COMMENT":
+            return {
+                ...state,
+                adding: -1,
+                discussions: [
+                    ...state.discussions,
+                    action.discussion
+                ]
+            }
+
 
         default:
             return state
