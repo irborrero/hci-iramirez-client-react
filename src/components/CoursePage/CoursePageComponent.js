@@ -23,11 +23,18 @@ class CoursePageComponent extends React.Component{
         return(
             <Provider store={store}>
                 <div>
-                    <InstructorComponent/>
+                    <InstructorComponent
+                        couseId = {this.props.courseId}
+                    />
                     <div className="container-fluid text-left">
                         <div className="row">
-                            <TopicsComponent/>
-                            <ConversationsComponent/>
+                            <TopicsComponent
+                                courseId = {this.props.courseId}
+                                topicId = {this.props.topicId}
+                            />
+                            <ConversationsComponent
+                                courseId = {this.props.courseId}
+                                topicId = {this.props.topicId}/>
                         </div>
                     </div>
                 </div>

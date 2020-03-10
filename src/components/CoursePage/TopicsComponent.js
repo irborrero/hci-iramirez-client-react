@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
-
+import {Link} from "react-router-dom";
 class  TopicsComponent extends React.Component {
 
     componentDidMount() {
@@ -17,9 +17,9 @@ class  TopicsComponent extends React.Component {
                         </text>
                         {
                             this.props.topics && this.props.topics.topics.map(topic =>
-                                <a href="#" className="list-group-item list-group-item-action">
+                                <Link to={`/course-manager/course/${this.props.courseId}/topic/${topic.id}`} className="list-group-item list-group-item-action">
                                     {topic.title}
-                                </a>
+                                </Link>
                             )
                         }
                     </div>

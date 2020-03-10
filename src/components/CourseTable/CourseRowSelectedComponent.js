@@ -27,7 +27,7 @@ class CourseRowSelectedComponent extends React.Component {
                             <td class ="selected" onClick={() => this.props.selectRow(this.props.index)}>
                                     {
                                             this.props.index !== this.props.editingRow &&
-                                            <Link className="white"  to={`/course/${this.props.course._id}`}>
+                                            <Link className="white"  to={`/course-manager/course/${this.props.course._id}`}>
                                                     <i className="fas fa-file-alt wbdv-row wbdv-icon white"></i>
                                                     <label className="courseTitle">{this.props.course.title}</label>
                                             </Link>

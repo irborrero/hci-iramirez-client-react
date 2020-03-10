@@ -1,5 +1,8 @@
 import React from "react";
 
+import {connect} from "react-redux";
+import {Link} from "react-router-dom";
+
 class ConversationsComponent extends React.Component{
 
     render() {
@@ -9,6 +12,11 @@ class ConversationsComponent extends React.Component{
                     <text className="list-group-item border-0">
                         <h4>DISCUSSIONS FOR TOPIC</h4>
                     </text>
+
+                    {
+
+
+                    }
 
                 </div>
                 <div className="list-group">
@@ -61,4 +69,25 @@ class ConversationsComponent extends React.Component{
 
 }
 
-export default ConversationsComponent
+const stateToPropertyMapper = (state) => {
+    return {
+        discussions: state.discussions
+    }
+}
+
+const dispatchToPropertyMapper = (dispatch) => {
+    return {
+
+        findAllTopics: () =>
+            dispatch({
+                type: 'FIND_ALL_TOPICS'
+            })
+
+
+    }
+}
+
+export default connect(
+    stateToPropertyMapper,
+    dispatchToPropertyMapper)
+(ConversationsComponent)

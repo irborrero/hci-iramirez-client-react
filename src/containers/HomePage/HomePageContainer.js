@@ -90,10 +90,22 @@ class HomePageContainer extends React.Component {
                        render={() =>
                            <CourseManagerContainer/>
                        }/>
-                <Route path="/course/:courseId"
+                <Route path="/course-manager/course/:courseId"
                        exact={true}
-                       render={() =>
-                           <CoursePageComponent/>
+                       render={(props) =>
+                           <CoursePageComponent
+                               {...props}
+                               courseId={props.match.params.courseId}
+                           />
+                       }/>
+                <Route path="/course-manager/course/:courseId/topic/:topicId"
+                       exact={true}
+                       render={(props) =>
+                           <CoursePageComponent
+                               {...props}
+                               courseId={props.match.params.courseId}
+                               topicId={props.match.params.topicId}
+                           />
                        }/>
 
 
