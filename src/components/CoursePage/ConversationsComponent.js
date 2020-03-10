@@ -10,57 +10,52 @@ class ConversationsComponent extends React.Component{
             <div className="col-9">
                 <div className="list-group">
                     <text className="list-group-item border-0">
-                        <h4>DISCUSSIONS FOR TOPIC</h4>
+                        <h4 className="d-inline">DISCUSSIONS FOR TOPIC</h4>
+                        <button type="button" className="btn btn-primary float-right"
+                                onClick={() => {this.props.addingComment(this.props.topicId)
+                                }}
+                        >Add Comment</button>
                     </text>
+                </div>
 
+
+                <div className="list-group">
+                    {this.props.discussions.adding === 0 &&
+                    <a href="#" className="list-group-item list-group-item-action flex-column align-items-start bg-light">
+                        <form>
+                            <div className="form-group">
+                                <label htmlFor="exampleFormControlInput1">Comment Title</label>
+                                <input type="email" className="form-control"
+                                       placeholder="Write your new comment here"/>
+                            </div>
+                            <div className="form-group">
+                                <label >Comment Body</label>
+                                <textarea className="form-control" placeholder="Write your new comment here"/>
+                            </div>
+                        </form>
+                        <button type="button" className="btn btn-success">Save</button>
+                        <button type="button" className="btn btn-danger">Cancel</button>
+                    </a>
+                    }
                     {
-
+                        this.props.discussions && this.props.discussions.discussions.map(discussion =>
+                            discussion.topic === this.props.topicId &&
+                            <a href="#"
+                               className="list-group-item list-group-item-action flex-column align-items-start">
+                                <div className="d-flex w-100 justify-content-between">
+                                    <h5 className="mb-1"> {discussion.title}</h5>
+                                    <small>Today</small>
+                                </div>
+                                <p className="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam
+                                    eget risus varius blandit.</p>
+                                <small>By {discussion.user}</small>
+                            </a>
+                        )
 
                     }
 
                 </div>
-                <div className="list-group">
-                    <a href="#"
-                       className="list-group-item list-group-item-action flex-column align-items-start">
-                        <div className="d-flex w-100 justify-content-between">
-                            <h5 className="mb-1"> I had a great experience!!</h5>
-                            <small>Today</small>
-                        </div>
-                        <p className="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam
-                            eget risus varius blandit.</p>
-                        <small>By Ann</small>
-                    </a>
-                    <a href="#"
-                       className="list-group-item list-group-item-action flex-column align-items-start">
-                        <div className="d-flex w-100 justify-content-between">
-                            <h5 className="mb-1">Great class but a lot of work...</h5>
-                            <small className="text-muted">1 days ago</small>
-                        </div>
-                        <p className="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam
-                            eget risus varius blandit.</p>
-                        <small className="text-muted">By Jerry</small>
-                    </a>
-                    <a href="#"
-                       className="list-group-item list-group-item-action flex-column align-items-start">
-                        <div className="d-flex w-100 justify-content-between">
-                            <h5 className="mb-1">Very useful!!</h5>
-                            <small className="text-muted">3 days ago</small>
-                        </div>
-                        <p className="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam
-                            eget risus varius blandit.</p>
-                        <small className="text-muted">By Dona</small>
-                    </a>
-                    <a href="#"
-                       className="list-group-item list-group-item-action flex-column align-items-start">
-                        <div className="d-flex w-100 justify-content-between">
-                            <h5 className="mb-1">Could have been better organized</h5>
-                            <small className="text-muted">3 days ago</small>
-                        </div>
-                        <p className="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam
-                            eget risus varius blandit.</p>
-                        <small className="text-muted">By Ben</small>
-                    </a>
-                </div>
+
 
             </div>
 
@@ -71,17 +66,24 @@ class ConversationsComponent extends React.Component{
 
 const stateToPropertyMapper = (state) => {
     return {
-        discussions: state.discussions
+        discussions: state.discussions,
     }
 }
 
 const dispatchToPropertyMapper = (dispatch) => {
     return {
 
-        findAllTopics: () =>
+        updateDiscussions: (topicId) =>
             dispatch({
-                type: 'FIND_ALL_TOPICS'
+                type: 'UPDATE_DISCUSSIONS',
+                topicId: topicId
+            }),
+        addingComment: (topicId) => {
+            dispatch({
+                type: 'ADDING_COMMENT',
             })
+        }
+
 
 
     }
