@@ -4,6 +4,10 @@ import "./CoursePage.style.client.css"
 
 class InstructorComponent extends React.Component{
 
+    state = {
+        briefDescription: this.props.briefDescription
+    }
+
     render() {
         return(
             <div className="container-fluid border text-left">
@@ -30,7 +34,7 @@ class InstructorComponent extends React.Component{
                                 {
                                     this.props.editingBriefDescription &&
                                     <button className="btn wbdv-row wbdv-button wbdv-save"
-                                        onClick={this.props.saveBriefDescription}>
+                                        onClick={()=> this.props.saveBriefDescription(this.state.briefDescription)}>
                                         <i className="fas fa-check wbdv-button wbdv-save"></i>
                                     </button>
 
@@ -39,27 +43,19 @@ class InstructorComponent extends React.Component{
                         </div>
                         {
                             this.props.editingBriefDescription===false &&
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                deserunt mollit anim id est laborum.</p>
+                            <span>{this.props.briefDescription}</span>
                         }
                         {
                             this.props.editingBriefDescription &&
                             <textarea className="form-control"
-                                      /*onChange={(e) => {
+                                      onChange={(e) => {
                                           const newText = String(e.target.value);
                                           this.setState(prevState => ({
-                                              widget: {
-                                                  ...prevState.widget,
-                                                  text: newText
-                                              }
+                                              briefDescription: newText
                                           }))
                                       }
                                       }
-                                      value={this.state.widget.text}*/>
+                                      value={this.state.briefDescription}>
                             </textarea>
                         }
                     </div>
@@ -73,6 +69,7 @@ class InstructorComponent extends React.Component{
 
 const stateToPropertyMapper = (state) => {
     return {
+        briefDescription: state.instructor.briefDescription,
         editingBriefDescription: state.instructor.editingBriefDescription
     }
 }
@@ -85,9 +82,10 @@ const dispatchToPropertyMapper = (dispatch) => {
                 type: 'EDIT_BRIEF_DESCRIPTION'
             }),
 
-        saveBriefDescription: () =>
+        saveBriefDescription: (newDescription) =>
             dispatch ({
-                type: 'SAVE_BRIEF_DESCRIPTION'
+                type: 'SAVE_BRIEF_DESCRIPTION',
+                newDescription: newDescription
             })
 
     }
