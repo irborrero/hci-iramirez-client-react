@@ -1,7 +1,6 @@
 import React from "react";
 import {BrowserRouter as Router, Link, Route} from "react-router-dom";
 import './HomePage.style.client.css';
-import CourseGridComponent from "../../components/CourseGrid/CourseGridComponent";
 import LogInComponent from "../../components/LogIn/LogInComponent";
 import SignUpComponent from "../../components/SignUp/SignUpComponent";
 import StudentOrProfessorComponent from "../../components/SignUp/StuendtOrProfessorComponent";
@@ -9,6 +8,7 @@ import SignUpProfessorComponent from "../../components/SignUp/SignUpProfessorCom
 import CourseManagerContainer from "../CourseManager/CourseManagerContainer";
 import ConfirmEmailComponent from "../../components/SignUp/ConfirmEmailComponent";
 import CoursePageComponent from "../../components/CoursePage/CoursePageComponent";
+import husky from "./husky.jpg"
 
 class HomePageContainer extends React.Component {
 
@@ -47,10 +47,12 @@ class HomePageContainer extends React.Component {
                            </span>
                                </div>
                            </nav>
-                               <div className="hv-100 justify-content-center align-items-center">
-                                   <h1>Welcome to Husky-Info</h1>
+                               <div className="container-home col-12">
+                                   <div className="hv-100 justify-content-center align-items-center">
+                                       <h1 className="white">Welcome to Husky-Info</h1>
+                                   </div>
+                                       <img src={husky} className="image-husky"/>
                                </div>
-
                            </div>
                        }/>
 

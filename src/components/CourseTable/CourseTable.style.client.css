@@ -2,3 +2,9 @@
     background-color: brown;
     color: white;
 }
+
+label.courseTitle {
+    font-size: x-large;
+    margin-left: 5px;
+}
+

@@ -2,6 +2,7 @@ import React from "react";
 import {connect} from "react-redux";
 import "./CoursePage.style.client.css"
 import icon from "./default-icon.jpg"
+import {BrowserRouter as Router, Link, Route} from "react-router-dom";
 
 class InstructorComponent extends React.Component{
 
@@ -17,8 +18,11 @@ class InstructorComponent extends React.Component{
                 </div>
                 <div className="row space-bottom space-left">
                     <div className="col-3 ">
-                        <h3 className="white">Instructor Picture</h3>
+                        <h3 className="white">Instructors Picture</h3>
                         <img src={icon}/>
+                        <h5 className="white">Stephen Intille, Ph.D.</h5>
+                        <a className="white a-instructor" href="http://www.ccs.neu.edu/home/intille/">More info</a>
+
                     </div>
                     <div className="col-9">
                         <div className="row">

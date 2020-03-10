@@ -28,7 +28,7 @@ class CourseRowSelectedComponent extends React.Component {
                                     {
                                             this.props.index !== this.props.editingRow &&
                                             <Link className="white"  to={`/course-manager/course/${this.props.course._id}`}>
-                                                    <i className="fas fa-file-alt wbdv-row wbdv-icon white"></i>
+                                                    <i className="fas fa-file-alt wbdv-row wbdv-icon white fa-2x"></i>
                                                     <label className="courseTitle">{this.props.course.title}</label>
                                             </Link>
                                     }
@@ -46,8 +46,8 @@ class CourseRowSelectedComponent extends React.Component {
                                            }
                                            value={this.state.course.title}/>}
                             </td>
-                            <td className="collapsable wbdv-row wbdv-owner owned-collapse selected">me</td>
-                            <td className="collapsable wbdv-row wbdv-modified-date lastModified-collapse selected">11:45 AM</td>
+                            <td className="collapsable wbdv-row wbdv-owner owned-collapse selected">Human Computer Interaction</td>
+                            <td className="collapsable wbdv-row wbdv-modified-date lastModified-collapse selected">Just Now</td>
                             <td className="selected">
                                     {
                                             this.props.index === this.props.editingRow &&

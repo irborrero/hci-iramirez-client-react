@@ -8,19 +8,19 @@ const CourseTableHeaderComponent = ({toggle}) =>
                exact={true}
                render={() =>
                    <tr className = "table">
-                       <th className="wbdv-header wbdv-title" scope="col">Title
+                       <th className="wbdv-header wbdv-title" scope="col">Course ID
                            <button className="btn">
                                <i className="fas fa-sort-up"></i>
                            </button>
                        </th>
                        <th className="wbdv-header wbdv-owner owned-collapse" scope="col">
-                           <label>Owned by</label>
+                           <label>Course Name</label>
                        </th>
                        <th className="wbdv-header wbdv-last-modified lastModified-collapse" scope="col">
                        <div className="form-check">
                            <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
                                <label className="form-check-label" htmlFor="defaultCheck1">
-                                   Last Modified by Me
+                                   Last Searched
                                </label>
                        </div>
                        </th>

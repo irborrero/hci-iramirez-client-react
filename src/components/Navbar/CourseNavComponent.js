@@ -23,12 +23,12 @@ const CourseNavComponent = ({addCourse, updateForm}) =>
                                onChange={(e) => updateForm({
                                    newCourseTitle: e.target.value
                                })}
-                               placeholder="New Course Title"
+                               placeholder="Introduce ID of the course you are looking for"
                                id="wbdv-new-course"/>
                        </div>
                        <div className="col-2">
                            <button onClick={addCourse} className="btn text wbdv-button wbdv-add-course">
-                               Add Course
+                               Search Course
                            </button>
                        </div>
                    </nav>
